@@ -223,7 +223,7 @@
 <?php
  //session_start();
  //error_reporting(0); //E_ALL^E_NOTICE
- 
+ error_reporting(0);//desactiva todos los reportes de errores
     if($_POST['enviar']!=""){ //si el boton no está vacio, se hace lo siguiente
     $msql= new mysqli("localhost", "root", "","bd_usuario");
     if($msql->connect_error)
