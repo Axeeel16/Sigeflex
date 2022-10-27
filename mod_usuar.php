@@ -43,7 +43,7 @@ $DNI_auxiliar=$_GET['valor'];
 			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 			<script src="js/bootstrap.min.js"></script>
 
-			<div class="cont_gen">
+			<div class="container">
 			<header class="he  bg-light">
 				 <h5 class="titu_head_bienv">Modificacion de Usuario</h5>
 						<nav class="navbar navbar-expand-lg bg-light">
@@ -134,33 +134,59 @@ $DNI_auxiliar=$_GET['valor'];
 					</form>
 					
 					
-						<footer class="pie_pag bg-light">
-					<div class="grupo_1">
-						<div class="box">
-							<figure>
-								<a href="#">
-									<img src="imagenes/dub.jpg" alt="dub"> <!--ANCLA: anchor-solid.svg -->
-								</a>
-							</figure>
-						</div>
-						<div class="box">
-								<h2>Sobre nosotros</h2>
-								<p>Font Awesome is the internet's icon library and toolkit used by millions of designers, developers, and content creators.</p>
-						</div>
-						<div class="box">
-							<h2>Siguenos</h2>
-							<div class="red_social">
-					<a href="#" class="bi bi-facebook"></a>
-					<a href="#" class="bi bi-instagram"></a>
-					<a href="#" class="bi bi-twitter"></a>
-					<a href="#" class="bi bi-youtube"></a>
+					<footer>
+		   <div class="container-fluid">
+			<div class="row p-5 pb-2 bg-light text-black">
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<p class="h3">Codigo AV</p>
+					<p class="text-secondary">Argentina, Buenos Aires</p>
 				</div>
-						</div>
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<p class="h5 mb-3">Codigos</p>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">html</a>
 					</div>
-					<div class="grupo_2">
-						<small>&copy; 2022 <b>Dubai</b> - Todos los Derechos Reservados. </small>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">css</a>
 					</div>
-				</footer>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">php</a>
+					</div>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">JavaScript</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<p class="h5 mb-3">Links</p>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">Torms & conditions</a>
+					</div>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">Privacy Policy</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-3">
+					<p class="h5 mb-3">Contactos</p>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">Instagram</a>
+					</div>
+					<div class="mb-2">
+						<a class="text-secondary text-decoration-none" href="#">Facebook</a>
+					</div>
+					<div class="mb-2">
+								<a class="text-secondary text-decoration-none" href="#">Youtube</a>
+							</div>
+							<div class="mb-2">
+								<a class="text-secondary text-decoration-none" href="#">Twitter</a>
+							</div>
+				</div>
+				<div class="col-xs-12 pt-4">
+					<p class="text-secondary text-center">Copyright - All rights reserved &copy; 2022</p>
+				</div>
+			</div>
+		
+		</div>
+	</footer>
 			</div>
 		</body>
 </html>
