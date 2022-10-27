@@ -1,0 +1,1 @@
+select logineventos.DNI_Accedido, sistemasaccesos.Descripcion_Sis_Acc from logineventos inner join sistemasaccesos on logineventos.Sistema_Accedido = sistemasaccesos.id_Sis_Acc

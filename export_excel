@@ -1,0 +1,111 @@
+<?php
+$msql = mysqli_connect("localhost", "root", "", );
+
+$consulta = "SELECT * FROM usuarios";
+$resultado = mysqli_query ($msql, $consulta) or die (mysql_error());
+
+$usuarios = array();
+while($rows = mysqli_fetch_assoc($resultado))
+{
+	$usuarios[] = $rows;
+}
+
+mysqli_close($msql);
+
+
+?>
+
+<div class="container">
+	<h2>Exportar datos a Excel con PHP y MySQL</h2>
+	
+	<div class="well-sm col-sm-12">
+		<div class="btn-group pull-right">
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+				<button type="submit" id="export_data" name="export_data" value="Export to excel"
+				class="btn btn-info">Exportar A Excel</button>
+			</form>
+		</div>
+	</div>
+	
+	<table id="" class="table table-striped table-bordered">
+		<tr>
+			<th>id_usuario</th>
+			<th>DNI</th>
+			<th>Nombre</th>
+			<th>Apellido</th>
+		</tr>
+		
+		<tbody>
+		<?php foreach($usuarios as $usuario) 
+		{ ?>
+			<tr>
+				<td><?php echo $usuario ['id_usuario']; ?></td>
+				<td><?php echo $usuario ['DNI']; ?></td>
+				<td><?php echo $usuario ['Nombre']; ?></td>
+				<td><?php echo $usuario ['Apellido']; ?></td>
+			</tr>
+		<?php } ?>
+		</tbody>
+		</table>
+	</div>
+	
+	<?php
+	if(isset($_POST["export_data"])){
+		if(!empty($usuarios)) {
+			$filename = "usuarios.xls";
+			header("Content-Type: application/vnd.ms-excel");
+			header("Content-Disposition: attachment; filename=".$filename);
+			$mostrar_columnas = false;
+			
+			foreach($usuarios as $usuario) {
+				if(!$mostrar_columnas) {
+					echo implode("\t", array_keys($usuario)) . "\n";
+					$mostrar_columnas = true;
+				}
+				echo implode("\t", array_values($usuario)) . "\n";
+			}
+		}else{
+			echo 'No hay datos a exportar';
+		}
+		exit;
+	}
+				
+	?>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

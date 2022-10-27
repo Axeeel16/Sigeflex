@@ -1,0 +1,50 @@
+<html>
+<body>
+	<div class="container-fluid">
+		<div class="row p-5 pb-2 bg-ligth text-black">
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<p class="h3">Codigo AV</p>
+				<p class="text-secondary">Argentina, Buenos Aires</p>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<p class="h5 mb-3">Codigos</p>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">html</a>
+				</div>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">css</a>
+				</div>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">php</a>
+				</div>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">JavaScript</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<p class="h5 mb-3">Links</p>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">Torms & conditions</a>
+				</div>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">Privacy Policy</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<p class="h5 mb-3">Contactos</p>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">Instagram</a>
+				</div>
+				<div class="mb-2">
+					<a class="text-white text-decoration-none" href="#">Facebook</a>
+				</div>
+			</div>
+			<div class="col-xs-12 pt-4">
+				<p class="text-white text-center">Copyright - All rights reserved o 2022</p>
+			</div>
+			
+		</div>
+	
+	</div>
+</body>
+</html>

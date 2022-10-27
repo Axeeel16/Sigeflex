@@ -1,0 +1,245 @@
+	 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	 /////	RECORRE CADA FILA DE UNA TABLA MYSQL Y VUELCA LOS RESULTADOS EN EL DESPLEGABLE							///
+	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	 // Consultar la base de datos
+$consulta_mysql=('select * from usuarios');
+$resultado_consulta_mysql=mysqli_query($msql,$consulta_mysql);
+echo "<select name='select1'>";
+while($fila=mysql_fetch_array($resultado_consulta_mysql)){
+ echo "<option value='".$fila['nombre']."'>".$fila['nombre']."</option>";
+ }
+echo "</select>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	CREAR PAGINACION						************************/
+/***********************************************************************************************************************/
+  <!-- <tfoot class="">
+      <tr class=" bg-withe">
+         <td  class="" colspan="6">
+      <?php
+	  /*
+         $totalPag = ceil($total/$limit);
+         $links = array();
+         for( $i=1; $i<=$totalPag ; $i++)
+         {
+            $links[] = "<a href=\"?pag=$i\" class='pagination pagination-lg'>$i</a>";
+         }
+         echo implode(" - ", $links);
+      */?>
+         </td>
+      </tr>
+   </tfoot>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	ANTIGUO FOOTER						********************************/
+/***********************************************************************************************************************/
+
+<footer class="pie_pag  bg-light">
+			<div class="grupo_1">
+				<div class="box">
+					<figure>
+						<a href="#">
+							<img src="imagenes/dub.jpg" alt="dub"> <!--ANCLA: anchor-solid.svg -->
+						</a>
+					</figure>
+				</div>
+				<div class="box">
+						<h2>Sobre nosotros</h2>
+						<p>Font Awesome is the internet's icon library and toolkit used by millions of designers, developers, and content creators.</p>
+				</div>
+				<div class="box">
+					<h2>Siguenos</h2>
+					<div class="red_social">
+					<a href="#" class="bi bi-facebook"></a>
+					<a href="#" class="bi bi-instagram"></a>
+					<a href="#" class="bi bi-twitter"></a>
+					<a href="#" class="bi bi-youtube"></a>
+				</div>
+				</div>
+			</div>
+			<div class="grupo_2">
+				<small>&copy; 2022 <b>Dubai</b> - Todos los Derechos Reservados. </small>
+			</div>
+		</footer>
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	CREAR DATABASE						********************************/
+/***********************************************************************************************************************/
+
+
+
+create database importex1;
+use importex1;
+
+create table person(
+id int not null auto_increment primary key,
+no varchar(255) ,
+name varchar(255) not null,
+lastname varchar(50) not null,
+address1 varchar(50),
+address2 varchar(50),
+phone1 varchar(50),
+phone2 varchar(50),
+email1 varchar(50),
+email2 varchar(50),
+created_at datetime not null
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	CREAR DATABASE						********************************/
+/***********************************************************************************************************************/
+
+create database importex1;
+use importex1;
+
+create table person(
+id int not null auto_increment primary key,
+no varchar(255) ,
+name varchar(255) not null,
+lastname varchar(50) not null,
+address1 varchar(50),
+address2 varchar(50),
+phone1 varchar(50),
+phone2 varchar(50),
+email1 varchar(50),
+email2 varchar(50),
+created_at datetime not null
+);
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	CONSULTA NOT IN						********************************/
+/***********************************************************************************************************************/
+
+
+SELECT apellido,nombre FROM alumnos                              //SELECCIONAME el apellido y nombre de la tabla alumnos
+WHERE alumnos.id_alumnos NOT IN                                  // donde el id_alumnos de la tabla alumnos NO ESTE EN
+(SELECT id_alumno_presente FROM presentismo);                    //SELECCIONAME  id_alumno_presente de la tabla presentismo 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	CONSULTA NOT EXIST						********************************/
+/***********************************************************************************************************************/
+
+
+SELECT apellido,nombre FROM alumnos std                                                //SELECCIONAME el appelido y nombre de la tabla alumnos std
+WHERE NOT EXISTS                                                                       //DONDE NO EXISTA EN
+(SELECT id_alumno_presente FROM presentismo WHERE std.id_alumnos = id_alumno_presente);//SELECCIONAME id_alumno_presente DE LA TABLA presentismo DONDE std.id_alumnos = id_alumno_presente
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	ELIMINAR BASE DE DATOS						********************************/
+/***********************************************************************************************************************/
+
+DROP database graficos;
+
+DROP DATABASE `bd_usuario`;
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************************************/
+/************************	INSERTAR DATOS						********************************/
+/***********************************************************************************************************************/
+
+INSERT INTO `ventas` VALUES (1,'2017-05-05',10000),
+       (2,'2017-07-09',12000),
+       (3,'2017-09-20',20000),
+       (4,'2018-01-01',50000),
+       (5,'2018-01-25',8000),
+       (6,'2018-02-14',10000);
